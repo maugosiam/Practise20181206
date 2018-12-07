@@ -18,6 +18,8 @@ public class User implements Comparable<User> {
         } else if (age < x.age) {
             return -1;
         } else
-            return 0;
+           return 0;
     }
+
 }
+
