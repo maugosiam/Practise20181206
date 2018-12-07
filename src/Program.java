@@ -22,26 +22,26 @@ public class Program {
         usersInArrayList.add(new User("Kjdfsd", "Grusha", 30));
         usersInArrayList.add(new User("Lbhfdgf", "Grusha", 41));
 
-        usersInArrayList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
+        usersInArrayList.forEach(m -> System.out.println(m.getGetFirstName()+" "+m.getLastName()+" "+m.getAge()));
         //usersInArrayList.sort(User::compareTo);
         Collections.sort(usersInArrayList);
         System.out.println("*************** Array List *******************");
-        usersInArrayList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
+        usersInArrayList.forEach(m -> System.out.println(m.getGetFirstName()+" "+m.getLastName()+" "+m.getAge()));
 
         Collections.shuffle(usersInArrayList);
 
         System.out.println("***************** s h u f f l e *********");
-        usersInArrayList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
+        usersInArrayList.forEach(m -> System.out.println(m.getGetFirstName()+" "+m.getLastName()+" "+m.getAge()));
 
 
         List<User> usersInLinkedList = new LinkedList<>();
 
         usersInLinkedList.addAll(usersInArrayList);
-        usersInLinkedList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
+        usersInLinkedList.forEach(m -> System.out.println(m.getGetFirstName()+" "+m.getLastName()+" "+m.getAge()));
 
         System.out.println("**************** Linked List **********************");
         //usersInLinkedList.sort(User::compareTo);
         Collections.sort(usersInLinkedList);
-        usersInLinkedList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
+        usersInLinkedList.forEach(m -> System.out.println(m.getGetFirstName()+" "+m.getLastName()+" "+m.getAge()));
     }
 }

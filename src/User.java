@@ -2,27 +2,27 @@ public class User implements Comparable<User> {
 
 
 
-    private String firstName;
-    private String lastName;
+    private String getFirstName;
+    private String getLastName;
     private int age;
 
 
 
-    public String getFirstName() {
-        return firstName;
+    public String getGetFirstName() {
+        return getFirstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return getLastName;
     }
 
     public int getAge() {
         return age;
     }
 
-    public User(String firstName, String lastName, int age) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public User(String firstName, String lastName, int getAge) {
+        this.getFirstName = firstName;
+        this.getLastName = lastName;
         this.age = age;
     }
 
