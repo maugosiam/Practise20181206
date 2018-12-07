@@ -7,11 +7,16 @@ public class UsersComparator implements Comparator {
         User firstUser = (User) o1;
         User secondUser = (User) o2;
 
-        if (firstUser.getAge() == secondUser.getAge()) {
-            return firstUser.getLastName().compareTo(secondUser.getLastName());
+        if(firstUser.getAge()>secondUser.getAge()){
+            return 1;
         }
-        else
+        if(firstUser.getAge()<secondUser.getAge()){
             return -1;
+            }
+        if(firstUser.getAge()==secondUser.getAge()){
+            return -1*secondUser.getLastName().compareTo(firstUser.getLastName());
+            }
+            else return 0;
 
     }
 }
