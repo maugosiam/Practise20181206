@@ -20,7 +20,7 @@ public class User implements Comparable<User> {
         return age;
     }
 
-    public User(String firstName, String lastName, int getAge) {
+    public User(String firstName, String lastName, int age) {
         this.getFirstName = firstName;
         this.getLastName = lastName;
         this.age = age;

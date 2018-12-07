@@ -6,7 +6,7 @@ public class Program {
 
         List<User> usersInArrayList = new ArrayList<>();
 
-        usersInArrayList.add(new User("Jakub", "Szczygiel", 14));
+        usersInArrayList.add(new User("Jakub", "Szczygiel", 12));
         usersInArrayList.add(new User("Niko", "Zalewski", 14));
         usersInArrayList.add(new User("Nikita", "Grusha", 19));
         usersInArrayList.add(new User("Ndsfdsfds", "G", 19));
@@ -42,6 +42,12 @@ public class Program {
         System.out.println("**************** Linked List **********************");
         //usersInLinkedList.sort(User::compareTo);
         Collections.sort(usersInLinkedList);
+        usersInLinkedList.forEach(m -> System.out.println(m.getGetFirstName()+" "+m.getLastName()+" "+m.getAge()));
+
+        System.out.println("**************** Linked List **********************");
+        System.out.println("**************** Linked List **********************");
+        System.out.println("**************** Linked List **********************");
+        Collections.sort(usersInLinkedList,new UsersComparator());
         usersInLinkedList.forEach(m -> System.out.println(m.getGetFirstName()+" "+m.getLastName()+" "+m.getAge()));
     }
 }
