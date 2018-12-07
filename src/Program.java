@@ -4,42 +4,44 @@ public class Program {
 
     public static void main(String args[]) {
 
-        List<User> users = new ArrayList<>();
+        List<User> usersInArrayList = new ArrayList<>();
 
-        users.add(new User("Jakub", "Szczygiel", 14));
-        users.add(new User("Niko", "Zalewski", 14));
-        users.add(new User("Nikita", "Grusha", 19));
-        users.add(new User("Ndsfdsfds", "G", 19));
-        users.add(new User("Adfsdf", "Grusha", 15));
-        users.add(new User("Bfbdsjffd", "Grusha", 45));
-        users.add(new User("Cwdbsd", "Grusha", 56));
-        users.add(new User("Dyrgyer", "Grusha", 78));
-        users.add(new User("Esdds", "Grusha", 20));
-        users.add(new User("Fbfhdsf", "Grusha", 99));
-        users.add(new User("Gsdgs", "Grusha", 39));
-        users.add(new User("Hjdbfd", "Grusha", 48));
-        users.add(new User("Jdfjbdsjf", "Grusha", 33));
-        users.add(new User("Kjdfsd", "Grusha", 30));
-        users.add(new User("Lbhfdgf", "Grusha", 41));
+        usersInArrayList.add(new User("Jakub", "Szczygiel", 14));
+        usersInArrayList.add(new User("Niko", "Zalewski", 14));
+        usersInArrayList.add(new User("Nikita", "Grusha", 19));
+        usersInArrayList.add(new User("Ndsfdsfds", "G", 19));
+        usersInArrayList.add(new User("Adfsdf", "Grusha", 15));
+        usersInArrayList.add(new User("Bfbdsjffd", "Grusha", 45));
+        usersInArrayList.add(new User("Cwdbsd", "Grusha", 56));
+        usersInArrayList.add(new User("Dyrgyer", "Grusha", 78));
+        usersInArrayList.add(new User("Esdds", "Grusha", 20));
+        usersInArrayList.add(new User("Fbfhdsf", "Grusha", 99));
+        usersInArrayList.add(new User("Gsdgs", "Grusha", 39));
+        usersInArrayList.add(new User("Hjdbfd", "Grusha", 48));
+        usersInArrayList.add(new User("Jdfjbdsjf", "Grusha", 33));
+        usersInArrayList.add(new User("Kjdfsd", "Grusha", 30));
+        usersInArrayList.add(new User("Lbhfdgf", "Grusha", 41));
 
-        users.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
-        users.sort(User::compareTo);
+        usersInArrayList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
+        //usersInArrayList.sort(User::compareTo);
+        Collections.sort(usersInArrayList);
         System.out.println("*************** Array List *******************");
-        users.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
+        usersInArrayList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
 
-        Collections.shuffle(users);
+        Collections.shuffle(usersInArrayList);
 
         System.out.println("***************** s h u f f l e *********");
-        users.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
+        usersInArrayList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
 
 
         List<User> usersInLinkedList = new LinkedList<>();
 
-        usersInLinkedList.addAll(users);
+        usersInLinkedList.addAll(usersInArrayList);
         usersInLinkedList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
 
         System.out.println("**************** Linked List **********************");
-        usersInLinkedList.sort(User::compareTo);
+        //usersInLinkedList.sort(User::compareTo);
+        Collections.sort(usersInLinkedList);
         usersInLinkedList.forEach(m -> System.out.println(m.firstName+" "+m.lastName+" "+m.age));
     }
 }
